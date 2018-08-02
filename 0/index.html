@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Buses Traffic</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    
+
+
+    </head>
+<body>
+    <header>
+    <div class="thetoplf"></div>
+    <div class="thetopri"></div>
+          <center class="marq"><marquee behavior="scroll" direction="right" scrollamount="5">
+            <span style="color: white"><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>
+            <span><a>test</a></span>            
+            </marquee></center>
+        <div class="headbtn">
+               <div class="onehead"><center><a class="ankor" href="#">الخريطه</a></center></div>
+           <center><div class="onehead1"><center><a class="ankor1" href="#">المسارات</a></center></div></center>
+             <div class="onehead2"><a class="ankor2" href="#">الحافلات</a></div>
+    
+
+        </div>
+    </header>
+    <center><div class="kar" id="kara">
+    <div class="map" id="map">
+    
+      </div>
+    </div></center>
+    
+ <!-- <script>
+     //executes the initMap function after the API loads.   
+function initMap() {//called from api &callback=initMap
+
+  // var mapDiv=document.getElementById('map');
+var divLine=document.getElementById('map');
+ 
+var bus1 = new google.maps.LatLng(21.4152031,39.8721678);
+  var bus2 = new google.maps.LatLng(21.4154071,39.8711234);
+  var bus3 = new google.maps.LatLng(21.4152061,39.8721545);
+  var bus4 = new google.maps.LatLng(21.4152010,39.8711676);
+
+
+//Map
+	//constructs a new Google maps object
+	var mapMakkah = new google.maps.Map(
+		map, //map div
+		{
+			center: bus1,//{lat: -34.397, lng: 150.644},
+			zoom: 16, // zoom level for the map. Zoom: 0 is the lowest zoom, and displays the entire earth
+			// mapTypeId: google.maps.MapTypeId.TERRAIN 
+    	}// map options
+    );
+
+
+	//§§§§§§§§§§§§§§§§§§§§ Marker §§§§§§§§§§§§§§§§§§§§§§§
+	
+	var markers=[];
+	markers.push(bus1);
+	markers.push(bus2);
+	markers.push(bus3);
+	markers.push(bus4);
+ 
+
+	for (var i = 0; i < markers.length; i++) {
+		new google.maps.Marker(
+	{
+		position: markers[i],
+	  		// icon:'pinkball-icon.png'
+ 		} //marker options
+ 		).setMap(mapMakkah);
+	}
+}
+
+    </script>-->
+
+    <div class="numb">
+    
+    
+    </div>
+    
+    
+    
+    
+    <!--- masar ---!>
+   
+    <center><div class="map" id="map">
+         <input type="text" id="lng" name="">
+ <input type="text" id="lat" name="">
+    </div></center>
+    
+    
+ 
+           <script>
+    //executes the initMap function after the API loads.   
+function initMap() {//called from api &callback=initMap
+
+  // var mapDiv=document.getElementById('map');
+var divLine=document.getElementById('map');
+ 
+
+//DirectionsService
+//constructs a new Google DirectionsService object
+var directionsService = new google.maps.DirectionsService();
+
+
+//DirectionsRenderer
+//constructs a new Google DirectionsRenderer object
+directionsDisplay = new google.maps.DirectionsRenderer();
+
+
+var map = new google.maps.Map(
+		divLine, //map div
+		{
+			center: start,//{lat: -34.397, lng: 150.644},
+			zoom: 15, // zoom level for the map. Zoom: 0 is the lowest zoom, and displays the entire earth
+			// mapTypeId: google.maps.MapTypeId.HYBRID
+		  } // map options
+	);
+
+ var start = new google.maps.LatLng(21.4225814,39.8263825
+);
+
+ var end = new google.maps.LatLng(21.3569224,39.9294846);
+
+
+// var start = new google.maps.LatLng(37.334818, -121.884886);
+// //var end = new google.maps.LatLng(38.334818, -181.884886);
+// var end = new google.maps.LatLng(37.441883, -122.143019);
+var bounds = new google.maps.LatLngBounds();
+bounds.extend(start);
+bounds.extend(end);
+map.fitBounds(bounds);
+var request = {
+    origin: start,
+    destination: end,
+    travelMode: google.maps.TravelMode.DRIVING
+};
+directionsService.route(request, function (response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
+        directionsDisplay.setMap(map);
+    } else {
+        alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
+    }
+});
+
+ 
+
+    // directionsService.route(request, function(response, status) {
+    //   if (status == google.maps.DirectionsStatus.OK) {
+    //     directionsDisplay.setDirections(response);
+    //     directionsDisplay.setMap(map);
+    //   } else {
+    //     alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
+    //   }
+    // });
+ 
+	//Map
+	//constructs a new Google maps object
+	
+	directionsDisplay.setMap(map);
+
+	 
+	//  var map3 = new google.maps.Map(
+	// 	googleMap3, //map div
+	// 	mapOptions3 // map options
+	// );
+
+	 
+
+
+	 
+
+
+	 
+ 
+}
+
+     </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5t6dgRpGvIGw-qx1nBGQ5mAyC4QMQ85E&callback=initMap&callback=initMap">
+    </script> 
+    </body>
+</html>
