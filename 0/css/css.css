@@ -1,3 +1,5 @@
+
+
 body
 {
  background-image: url(images/4.jpg);
@@ -100,7 +102,7 @@ marquee span
     text-decoration: none;
     top: 50%;
     font-size: 140%;
-    font-family: monospace;
+    font-family : kankan;
 }
 
 .onehead1
@@ -127,6 +129,7 @@ marquee span
     font-size: 140%;
     font-family: monospace;
     margin-right: 10%;
+    font-family : kankan;
 }
 
 .onehead2
@@ -158,6 +161,7 @@ marquee span
     margin-right: 10%;
     float: right;
     margin-right: 20%;
+    font-family : kankan;
 }
 
 
@@ -176,6 +180,7 @@ width: 100%;
     height: 300px;
     background-color: aqua;
     border: 20px solid #e8dcc2;
+    visibility: hidden;
 }
 
 
@@ -185,7 +190,56 @@ width: 100%;
 {
     width: 40%;
     height: 60px;
-    background-color: aquamarine;
-    float: right;
+    visibility: hidden;
+    float: left;
     margin-top: 10px;
+}
+
+.ab
+{
+  font-size: 250%;
+  color: #ba9242;
+  margin-left: 7%;  
+}
+
+.ab1
+{
+    width: 200px;
+    background-color: white;
+    height: 40px;
+    display: inline-block;
+    float: center;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius:10px 20px 10px 30px; 
+    border: 5px solid #cfb37b;
+}
+
+
+.path
+{
+    width: 50%;
+    height: 400px;
+    background-color: aqua;
+    margin-top: -350px;
+    float: left;
+    margin-left: -35%;
+    visibility: hidden;
+}
+
+.olo
+{
+ font-size: 30px;
+}
+
+
+/* ----- the table ----- */
+
+.tabl
+{
+   margin-top: -200px;
+    display: inline;
+   width: 500px;
+    height: 800px;
+    
 }

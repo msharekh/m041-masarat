@@ -5,9 +5,7 @@
     <title>Buses Traffic</title>
     
     <link rel="stylesheet" type="text/css" href="css/css.css"/>
-    
-
-
+    <script src="jq/jquery-3.3.1.min.js"></script>
     </head>
 <body>
     <header>
@@ -25,20 +23,68 @@
             <span><a>test</a></span>            
             </marquee></center>
         <div class="headbtn">
-               <div class="onehead"><center><a class="ankor" href="#">الخريطه</a></center></div>
-           <center><div class="onehead1"><center><a class="ankor1" href="#">المسارات</a></center></div></center>
-             <div class="onehead2"><a class="ankor2" href="#">الحافلات</a></div>
+               <div class="onehead"><center><a class="ankor" href="#">The Map</a></center></div>
+           <center><div class="onehead1"><center><a class="ankor1" href="#">Paths</a></center></div></center>
+             <div class="onehead2"><a class="ankor2" href="#">Buses</a></div>
     
 
         </div>
     </header>
+
     <center><div class="kar" id="kara">
     <div class="map" id="map">
     
       </div>
     </div></center>
     
- <!-- <script>
+    <div class="numb">
+    <span class="ab">Available Bus</span>
+    <div class="ab1"><center><span style="float: center ; font-size: 30px">780</span></center></div>
+    </div>
+    
+    <!-- the path div -->
+   <div class="path" >
+   <ol class="olo">
+       <lh>Please select one</lh>
+    <li>
+       <span>-</span>
+       </li>
+       <li>
+       <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+       <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li><li>
+        <span>-</span>
+       </li>
+       </ol> 
+    
+    
+    </div> 
+
+    <!-- the map div -->
+    <!-- masar -->
+   
+    <center><div class="map" id="map">
+      <!--   <input type="text" id="lng" name="">
+ <input type="text" id="lat" name="">-->
+    </div></center>
+    
+    <!--2 points -->
+   <!--<script>
      //executes the initMap function after the API loads.   
 function initMap() {//called from api &callback=initMap
 
@@ -83,24 +129,7 @@ var bus1 = new google.maps.LatLng(21.4152031,39.8721678);
 }
 
     </script>-->
-
-    <div class="numb">
-    
-    
-    </div>
-    
-    
-    
-    
-    <!--- masar ---!>
-   
-    <center><div class="map" id="map">
-         <input type="text" id="lng" name="">
- <input type="text" id="lat" name="">
-    </div></center>
-    
-    
- 
+    <!--lines-->
            <script>
     //executes the initMap function after the API loads.   
 function initMap() {//called from api &callback=initMap
@@ -190,6 +219,7 @@ directionsService.route(request, function (response, status) {
      </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5t6dgRpGvIGw-qx1nBGQ5mAyC4QMQ85E&callback=initMap&callback=initMap">
-    </script> 
+    </script>
+    <script src="js/js.js"></script>
     </body>
 </html>
