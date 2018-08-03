@@ -171,7 +171,7 @@ marquee span
 {
 width: 100%;
     height: 100%;
- 
+ /*display: none;*/
 }
 
 .kar
@@ -220,11 +220,11 @@ width: 100%;
 {
     width: 50%;
     height: 400px;
-    background-color: aqua;
-    margin-top: -350px;
+    /*background-color: aqua;*/
+    margin-top: -300px;
     float: left;
     margin-left: -35%;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 .olo

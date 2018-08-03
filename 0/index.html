@@ -1,89 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-    <title>Buses Traffic</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/css.css"/>
-    <script src="jq/jquery-3.3.1.min.js"></script>
-    </head>
+
+  <title>Buses Traffic</title>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="css/css.css"/>
+  <script src="jq/jquery-3.3.1.min.js"></script>
+</head>
 <body>
-    <header>
+  <header>
     <div class="thetoplf"></div>
     <div class="thetopri"></div>
-          <center class="marq"><marquee behavior="scroll" direction="right" scrollamount="5">
-            <span style="color: white"><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>
-            <span><a>test</a></span>            
-            </marquee></center>
-        <div class="headbtn">
-               <div class="onehead"><center><a class="ankor" href="#">The Map</a></center></div>
-           <center><div class="onehead1"><center><a class="ankor1" href="#">Paths</a></center></div></center>
-             <div class="onehead2"><a class="ankor2" href="#">Buses</a></div>
-    
+    <center class="marq"><marquee behavior="scroll" direction="right" scrollamount="5">
+      <span style="color: white"><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>
+      <span><a>test</a></span>            
+    </marquee></center>
+    <div class="headbtn">
+     <div class="onehead"><center><a class="ankor" href="#">The Map</a></center></div>
+     <center><div class="onehead1"><center><a class="ankor1" href="#">Paths</a></center></div></center>
+     <div class="onehead2"><a class="ankor2" href="#">Buses</a></div>
 
-        </div>
-    </header>
 
-    <center><div class="kar" id="kara">
+   </div>
+ </header>
+
+ <center>
+  <div class="kar" id="kara">
+
+    <!-- map -->
     <div class="map" id="map">
-    
-      </div>
-    </div></center>
-    
-    <div class="numb">
-    <span class="ab">Available Bus</span>
-    <div class="ab1"><center><span style="float: center ; font-size: 30px">780</span></center></div>
-    </div>
-    
-    <!-- the path div -->
-   <div class="path" >
-   <ol class="olo">
-       <lh>Please select one</lh>
-    <li>
-       <span>-</span>
-       </li>
-       <li>
-       <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-       <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li><li>
-        <span>-</span>
-       </li>
-       </ol> 
-    
-    
-    </div> 
 
-    <!-- the map div -->
-    <!-- masar -->
+    </div>
+
+  </div>
+</center>
+
+<div class="numb">
+  <span class="ab">Available Bus</span>
+  <div class="ab1"><center><span style="float: center ; font-size: 30px">780</span></center></div>
+</div>
+
+<!-- the path div -->
+<div class="path" >
+
+  PATHS
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>from</th>
+        <th>to</th>
+        <th>status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="path1">haram road</td>
+        <td>mina</td>
+        <td>masjed-haram</td>
+        <td>Open</td>
+      </tr>
+      <tr>
+        <td id="path2">Mosdailfa road</td>
+        <td>arafa</td>
+        <td>mosdalifa</td>
+        <td>closed</td>
+      </tr>
+      
+    </tbody>
+  </table>
+ <!-- <ol class="olo">
+   <lh>Please select one</lh>
+   <li>
+     <span>-</span>
+   </li>
+   <li>
+     <span>-</span>
+   </li><li>
+    <span>-</span>
+  </li><li>
+    <span>-</span>
+  </li><li>
+   <span>-</span>
+ </li><li>
+  <span>-</span>
+</li><li>
+  <span>-</span>
+</li><li>
+  <span>-</span>
+</li><li>
+  <span>-</span>
+</li><li>
+  <span>-</span>
+</li><li>
+  <span>-</span>
+</li>
+</ol>  -->
+
+BUSES
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>plate number</th>
+        <th>line</th>
+        <th>time</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ABC 454</td>
+        <td>mina road</td>
+        <td>9 PM</td>
+       
+      </tr>
+      <tr>
+        <td>XYZ 678</td>
+        <td>haram road</td>
+        <td>4 AM</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+</div> 
+
+<!-- the map div -->
+<!-- masar -->
+ 
+<center>
+
    
-    <center><div class="map" id="map">
+  <div class="map" >
       <!--   <input type="text" id="lng" name="">
- <input type="text" id="lat" name="">-->
-    </div></center>
-    
-    <!--2 points -->
+       <input type="text" id="lat" name="">-->
+
+       <div id="divLine" style="width:700px;height:600px;"></div>
+     </div>
+   </center>
+
+   <!--2 points -->
    <!--<script>
      //executes the initMap function after the API loads.   
 function initMap() {//called from api &callback=initMap
@@ -128,14 +199,29 @@ var bus1 = new google.maps.LatLng(21.4152031,39.8721678);
 	}
 }
 
-    </script>-->
-    <!--lines-->
-           <script>
-    //executes the initMap function after the API loads.   
-function initMap() {//called from api &callback=initMap
+</script>-->
+<!--lines-->
+  
+
+         
+
+
+   
+<!--  <div id="map"></div> -->
+<br>
+<br>
+<br>
+
+
+<script type="text/javascript">
+      
+
+
+      //executes the initMap function after the API loads.   
+function initMap(linecolor,startpoint,endpoint) {//called from api &callback=initMap
 
   // var mapDiv=document.getElementById('map');
-var divLine=document.getElementById('map');
+var divLine=document.getElementById('divLine');
  
 
 //DirectionsService
@@ -145,22 +231,25 @@ var directionsService = new google.maps.DirectionsService();
 
 //DirectionsRenderer
 //constructs a new Google DirectionsRenderer object
-directionsDisplay = new google.maps.DirectionsRenderer();
+directionsDisplay = new google.maps.DirectionsRenderer({
+    polylineOptions: {
+      strokeColor: linecolor
+    }
+  });
 
 
 var map = new google.maps.Map(
-		divLine, //map div
-		{
-			center: start,//{lat: -34.397, lng: 150.644},
-			zoom: 15, // zoom level for the map. Zoom: 0 is the lowest zoom, and displays the entire earth
-			// mapTypeId: google.maps.MapTypeId.HYBRID
-		  } // map options
-	);
+            divLine, //map div
+            {
+                  center: start,//{lat: -34.397, lng: 150.644},
+                  zoom: 15, // zoom level for the map. Zoom: 0 is the lowest zoom, and displays the entire earth
+                  // mapTypeId: google.maps.MapTypeId.HYBRID
+              } // map options
+      );
 
- var start = new google.maps.LatLng(21.4225814,39.8263825
-);
+ var start = new google.maps.LatLng(startpoint.lat,startpoint.lng);
 
- var end = new google.maps.LatLng(21.3569224,39.9294846);
+ var end = new google.maps.LatLng(endpoint.lat,endpoint.lng);
 
 
 // var start = new google.maps.LatLng(37.334818, -121.884886);
@@ -195,31 +284,37 @@ directionsService.route(request, function (response, status) {
     //   }
     // });
  
-	//Map
-	//constructs a new Google maps object
-	
-	directionsDisplay.setMap(map);
+      //Map
+      //constructs a new Google maps object
+      
+      directionsDisplay.setMap(map);
 
-	 
-	//  var map3 = new google.maps.Map(
-	// 	googleMap3, //map div
-	// 	mapOptions3 // map options
-	// );
+       
+      //  var map3 = new google.maps.Map(
+      //    googleMap3, //map div
+      //    mapOptions3 // map options
+      // );
 
-	 
-
-
-	 
+       
 
 
-	 
+     
+
+
+       
  
 }
 
-     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5t6dgRpGvIGw-qx1nBGQ5mAyC4QMQ85E&callback=initMap&callback=initMap">
-    </script>
-    <script src="js/js.js"></script>
-    </body>
+</script>
+
+
+<script src="js/js.js"></script>
+<!-- <script type="text/javascript" src="script.js"></script> -->
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5t6dgRpGvIGw-qx1nBGQ5mAyC4QMQ85E&callback=initMap"
+async defer></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5t6dgRpGvIGw-qx1nBGQ5mAyC4QMQ85E"
+></script>
+<!-- <script src="js/script.js"></script> -->
+</body>
 </html>
